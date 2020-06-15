@@ -35,6 +35,8 @@ class Campo {
       return;
     }
 
+    _aberto = true;
+
     if (_minado) {
       _explodido = true;
       throw ExplosaoException();
