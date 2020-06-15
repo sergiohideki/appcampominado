@@ -1,4 +1,6 @@
 import 'package:appcampominado/components/campo_widget.dart';
+import 'package:appcampominado/components/tabuleiro_widget.dart';
+import 'package:appcampominado/models/tabuleiro.dart';
 import 'package:flutter/material.dart';
 import '../components/resultado_widget.dart';
 import '../models/campo.dart';
@@ -45,9 +47,12 @@ class _CampoMinadoAppState extends State<CampoMinadoApp> {
           onReiniciar: _reiniciar,
         ),
         body: Container(
-          color: Colors.grey,
-          child: CampoWidget(
-            campo: campo,
+          child: TabuleiroWidget(
+            tabuleiro: Tabuleiro(
+              linhas: 15,
+              colunas: 15,
+              qtdeBombas: 10,
+            ),
             onAbrir: _abrir,
             onAlternarMarcacao: _alternarMarcacao,
           ),
